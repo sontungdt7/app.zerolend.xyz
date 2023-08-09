@@ -1,10 +1,9 @@
 import { Box, Tooltip, Typography } from '@mui/material';
-import { useAppDataContext } from 'src/hooks/app-data-provider/useAppDataProvider';
 
 import { PopperComponent } from '../ContentWithTooltip';
 import GhoBorrowApyRange from '../GhoBorrowApyRange';
 import { FormattedNumber } from '../primitives/FormattedNumber';
-import { Link } from '../primitives/Link';
+import { NoData } from '../primitives/NoData';
 import { TokenIcon } from '../primitives/TokenIcon';
 
 export interface GhoIncentivesCardProps {
@@ -23,19 +22,10 @@ export const GhoIncentivesCard = ({
   value,
   useApyRange,
   rangeValues = [0, 0],
-  ghoRoute,
-  stkAaveBalance,
   userQualifiesForDiscount,
-  onMoreDetailsClick,
   withTokenIcon = false,
   forceShowTooltip = false,
 }: GhoIncentivesCardProps) => {
-  const { ghoReserveData } = useAppDataContext();
-  const stkAaveAmount = Number(stkAaveBalance);
-
-  const minStkAaveBalanceReached =
-    stkAaveAmount >= ghoReserveData.ghoMinDiscountTokenBalanceForDiscount;
-
   let toolTipContent = <></>;
   const showTooltip = userQualifiesForDiscount || forceShowTooltip;
   if (showTooltip) {

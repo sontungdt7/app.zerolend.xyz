@@ -8,11 +8,9 @@ import {
   SvgIcon,
   SvgIconProps,
   Typography,
-  useMediaQuery,
-  useTheme,
 } from '@mui/material';
-import { ReactNode, useRef, useState } from 'react';
-import { compactNumber, FormattedNumber } from 'src/components/primitives/FormattedNumber';
+import { ReactNode, } from 'react';
+import { FormattedNumber } from 'src/components/primitives/FormattedNumber';
 import { useModalContext } from 'src/hooks/useModal';
 import { useProtocolDataContext } from 'src/hooks/useProtocolDataContext';
 import { useRootStore } from 'src/store/root';
@@ -35,61 +33,12 @@ const ExtLinkIcon = (props: SvgIconProps) => (
   </SvgIcon>
 );
 
-const COPY_IMAGE_TIME = 5000;
 
 export const GhoBorrowSuccessView = ({ txHash, action, amount, symbol }: SuccessTxViewProps) => {
-  const [generatedImage, setGeneratedImage] = useState<string | undefined>();
-  const [generatedBlob, setGeneratedBlob] = useState<Blob | null>();
-  const [clickedCopyImage, setClickedCopyImage] = useState(false);
   const { mainTxState } = useModalContext();
   const { currentNetworkConfig } = useProtocolDataContext();
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const theme = useTheme();
-  const downToXSM = useMediaQuery(theme.breakpoints.down('xsm'));
+
   const trackEvent = useRootStore((store) => store.trackEvent);
-
-  const compactedNumber = compactNumber({ value: amount, visibleDecimals: 2, roundDown: true });
-  const finalNumber = `${compactedNumber.prefix}${compactedNumber.postfix}`;
-  const canCopyImage = typeof ClipboardItem !== 'undefined';
-
-  const onCopyImage = () => {
-    if (generatedBlob) {
-      navigator.clipboard
-        .write([
-          new ClipboardItem({
-            [generatedBlob.type]: generatedBlob,
-          }),
-        ])
-        .then(() => {
-          trackEvent(GHO_SUCCESS_MODAL.GHO_COPY_IMAGE);
-          setClickedCopyImage(true);
-          setTimeout(() => {
-            setClickedCopyImage(false);
-          }, COPY_IMAGE_TIME);
-        })
-        .catch(() => {
-          trackEvent(GHO_SUCCESS_MODAL.GHO_FAIL_COPY_IMAGE);
-        });
-    }
-  };
-
-  const transformImage = (svg: SVGSVGElement) => {
-    if (canvasRef.current) {
-      const canvas = canvasRef.current;
-      const context = canvas.getContext('2d');
-      if (context) {
-        const img = new Image();
-        img.onload = () => {
-          document.fonts.ready.then(() => {
-            context.drawImage(img, 0, 0);
-            setGeneratedImage(canvasRef.current?.toDataURL('png', 1));
-            canvasRef.current?.toBlob((blob) => setGeneratedBlob(blob), 'png');
-          });
-        };
-        img.src = `data:image/svg+xml;utf8,${encodeURIComponent(svg.outerHTML)}`;
-      }
-    }
-  };
 
   return (
     <>

@@ -38,7 +38,6 @@ import { DetailsHFLine, TxModalDetails } from '../FlowCommons/TxModalDetails';
 import { BorrowActions } from './BorrowActions';
 import { BorrowAmountWarning } from './BorrowAmountWarning';
 import { GhoBorrowSuccessView } from './GhoBorrowSuccessView';
-import { ParameterChangewarning } from './ParameterChangewarning';
 
 export enum ErrorType {
   STABLE_RATE_NOT_ENABLED,
@@ -127,7 +126,6 @@ export const GhoBorrowModalContent = ({
   // Check if user has any open borrow positions on ONEZ
   // Check if user can borrow at a discount
   const hasGhoBorrowPositions = ghoUserData.userGhoBorrowBalance > 0;
-  const userStakedAaveBalance: number = ghoUserData.userDiscountTokenBalance;
   const discountAvailable = ghoUserQualifiesForDiscount(amount);
 
   // amount calculations

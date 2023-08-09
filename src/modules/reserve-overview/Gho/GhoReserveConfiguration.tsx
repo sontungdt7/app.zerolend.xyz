@@ -7,7 +7,7 @@ import { ComputedReserveData } from 'src/hooks/app-data-provider/useAppDataProvi
 import { ReserveEModePanel } from '../ReserveEModePanel';
 import { PanelRow, PanelTitle } from '../ReservePanels';
 import { GhoBorrowInfo } from './GhoBorrowInfo';
-import { GhoDiscountCalculator } from './GhoDiscountCalculator';
+
 
 type GhoReserveConfigurationProps = {
   reserve: ComputedReserveData;

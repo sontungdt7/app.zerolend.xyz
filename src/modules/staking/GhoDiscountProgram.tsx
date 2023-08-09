@@ -3,16 +3,12 @@ import { Trans } from '@lingui/macro';
 import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { Link, ROUTES } from 'src/components/primitives/Link';
 import { useRootStore } from 'src/store/root';
-import { CustomMarket, marketsData } from 'src/ui-config/marketsConfig';
 
 export const GhoDiscountProgram = () => {
   const { breakpoints } = useTheme();
   const downToXsm = useMediaQuery(breakpoints.down('xsm'));
   const currentMarket = useRootStore((store) => store.currentMarket);
 
-  const ghoTokenAddress = marketsData[
-    CustomMarket.proto_mainnet_v3
-  ].addresses.GHO_TOKEN_ADDRESS?.toLowerCase() as string;
 
   return (
     <Box
@@ -84,7 +80,7 @@ export const GhoDiscountProgram = () => {
           <Button
             variant="contained"
             component={Link}
-            href={ROUTES.reserveOverview(ghoTokenAddress, currentMarket)}
+            href={ROUTES.reserveOverview('', currentMarket)}
             size={downToXsm ? 'medium' : 'small'}
             sx={{
               alignItems: 'center',
