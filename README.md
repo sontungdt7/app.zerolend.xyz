@@ -11,15 +11,15 @@
  -/:             :/-  -/:             :/.     ://:         `/////////////-
 ```
 
-# Aave protocol interface :ghost:
+# ZeroLend protocol interface :ghost:
 
-An open source interface for the decentralized liquidity protocol Aave
+An open source interface for the decentralized liquidity protocol ZeroLend
 
 Enabling users to:
 
-- Manage and monitor their positions on the Aave Protocol, and the overall status of it
-- Manage and monitor their positions on the Aave Safety module
-- Participate in the Aave Governance
+- Manage and monitor their positions on the ZeroLend Protocol, and the overall status of it
+- Manage and monitor their positions on the ZeroLend Safety module
+- Participate in the ZeroLend Governance
 
 ## How to use
 

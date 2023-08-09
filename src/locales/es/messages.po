@@ -41,8 +41,8 @@ msgid "<0>Ampleforth</0> is a rebasing asset. Visit the <1>documentation</1> to 
 msgstr "<0>Ampleforth</0> es un activo con rebase. Visita la <1>documentación</1> para aprender más."
 
 #: src/components/transactions/Borrow/ParameterChangewarning.tsx
-msgid "<0>Attention:</0> Parameter changes via governance can alter your account health factor and risk of liquidation. Follow the <1>Aave governance forum</1> for updates."
-msgstr "<0>Atención:</0> Los cambios de parámetros a través de la gobernanza pueden alterar el factor de salud de tu cuenta y el riesgo de liquidación. Sigue el <1>foro de gobierno de Aave</1> para mantenerte actualizado."
+msgid "<0>Attention:</0> Parameter changes via governance can alter your account health factor and risk of liquidation. Follow the <1>ZeroLend governance forum</1> for updates."
+msgstr "<0>Atención:</0> Los cambios de parámetros a través de la gobernanza pueden alterar el factor de salud de tu cuenta y el riesgo de liquidación. Sigue el <1>foro de gobierno de ZeroLend</1> para mantenerte actualizado."
 
 #: src/modules/dashboard/lists/SlippageList.tsx
 msgid "<0>Slippage tolerance </0><1>{selectedSlippage}% </1><2>{0}</2>"
@@ -119,25 +119,25 @@ msgid "AToken supply is not zero"
 msgstr "El balance de AToken no es cero"
 
 #: src/modules/governance/GovernanceTopPanel.tsx
-msgid "Aave Governance"
-msgstr "Gobierno de Aave"
+msgid "ZeroLend Governance"
+msgstr "Gobierno de ZeroLend"
 
 #: src/modules/reserve-overview/AddTokenDropdown.tsx
 #: src/modules/reserve-overview/TokenLinkDropdown.tsx
-msgid "Aave aToken"
-msgstr "aToken de Aave"
+msgid "ZeroLend aToken"
+msgstr "aToken de ZeroLend"
 
 #: src/modules/reserve-overview/TokenLinkDropdown.tsx
-msgid "Aave debt token"
-msgstr "Token de deuda de Aave"
+msgid "ZeroLend debt token"
+msgstr "Token de deuda de ZeroLend"
 
 #: src/modules/governance/GovernanceTopPanel.tsx
-msgid "Aave is a fully decentralized, community governed protocol by the AAVE token-holders. AAVE token-holders collectively discuss, propose, and vote on upgrades to the protocol. AAVE token-holders (Ethereum network only) can either vote themselves on new proposals or delagate to an address of choice. To learn more check out the Governance"
-msgstr "Aave es un protocolo totalmente descentralizado, gobernado por la comunidad de poseedores de tokens AAVE. Los poseedores de tokens AAVE discuten, proponen y votan colectivamente sobre las actualizaciones del protocolo. Los poseedores de tokens AAVE (solo en la red Ethereum) pueden votar ellos mismos sobre nuevas propuestas o delegarse a una dirección de su elección. Para aprender más, consulta la"
+msgid "ZeroLend is a fully decentralized, community governed protocol by the AAVE token-holders. AAVE token-holders collectively discuss, propose, and vote on upgrades to the protocol. AAVE token-holders (Ethereum network only) can either vote themselves on new proposals or delagate to an address of choice. To learn more check out the Governance"
+msgstr "ZeroLend es un protocolo totalmente descentralizado, gobernado por la comunidad de poseedores de tokens AAVE. Los poseedores de tokens AAVE discuten, proponen y votan colectivamente sobre las actualizaciones del protocolo. Los poseedores de tokens AAVE (solo en la red Ethereum) pueden votar ellos mismos sobre nuevas propuestas o delegarse a una dirección de su elección. Para aprender más, consulta la"
 
 #: src/modules/staking/StakingPanel.tsx
-msgid "Aave per month"
-msgstr "Aave por mes"
+msgid "ZeroLend per month"
+msgstr "ZeroLend por mes"
 
 #: src/modules/reserve-overview/Gho/GhoReserveConfiguration.tsx
 msgid "About GHO"
@@ -535,8 +535,8 @@ msgid "Borrowing is currently unavailable for {0}."
 msgstr "Tomar prestado no está disponible actualmente para {0}."
 
 #: src/components/Warnings/BorrowDisabledWarning.tsx
-msgid "Borrowing is disabled due to an Aave community decision. <0>More details</0>"
-msgstr "Tomar prestado está deshabilitado debido a una decisión de la comunidad de Aave. <0>Más información</0>"
+msgid "Borrowing is disabled due to an ZeroLend community decision. <0>More details</0>"
+msgstr "Tomar prestado está deshabilitado debido a una decisión de la comunidad de ZeroLend. <0>Más información</0>"
 
 #: src/ui-config/errorMapping.tsx
 msgid "Borrowing is not enabled"
@@ -890,8 +890,8 @@ msgid "Discount model parameters"
 msgstr "Parámetros del modelo de descuento"
 
 #: src/modules/reserve-overview/Gho/GhoDiscountCalculator.tsx
-msgid "Discount parameters are decided by the Aave community and may be changed over time. Check Governance for updates and vote to participate. <0>Learn more</0>"
-msgstr "Los parámetros de descuento son decididos por la comunidad de Aave y pueden cambiar con el tiempo. Consulta el Gobierno para ver actualizaciones y vota para participar. <0>-Aprende más</0>"
+msgid "Discount parameters are decided by the ZeroLend community and may be changed over time. Check Governance for updates and vote to participate. <0>Learn more</0>"
+msgstr "Los parámetros de descuento son decididos por la comunidad de ZeroLend y pueden cambiar con el tiempo. Consulta el Gobierno para ver actualizaciones y vota para participar. <0>-Aprende más</0>"
 
 #: src/modules/reserve-overview/Gho/GhoDiscountCalculator.tsx
 msgid "Discountable amount"
@@ -910,8 +910,8 @@ msgid "Due to internal stETH mechanics required for rebasing support, it is not 
 msgstr "Debido a mecánicas internas de stETH requeridas para el soporte del rebase, no es posible realizar un cambio de garantía donde stETH es el token de origen."
 
 #: src/components/transactions/Warnings/MarketWarning.tsx
-msgid "Due to the Horizon bridge exploit, certain assets on the Harmony network are not at parity with Ethereum, which affects the Aave V3 Harmony market."
-msgstr "Debido al exploit del puente de Horizon, ciertos activos en la red de Harmony no están en paridad con Ethereum, lo que afecta al mercado de Harmony en Aave V3."
+msgid "Due to the Horizon bridge exploit, certain assets on the Harmony network are not at parity with Ethereum, which affects the ZeroLend V3 Harmony market."
+msgstr "Debido al exploit del puente de Horizon, ciertos activos en la red de Harmony no están en paridad con Ethereum, lo que afecta al mercado de Harmony en ZeroLend V3."
 
 #: src/modules/dashboard/DashboardEModeButton.tsx
 msgid "E-Mode"
@@ -934,8 +934,8 @@ msgid "E-Mode increases your LTV for a selected category of assets up to<0/>. <1
 msgstr "El E-Mode incrementa tu LTV para una categoría seleccionada de activos hasta el <0/>. <1>Aprende más</1>"
 
 #: src/modules/reserve-overview/ReserveEModePanel.tsx
-msgid "E-Mode increases your LTV for a selected category of assets, meaning that when E-mode is enabled, you will have higher borrowing power over assets of the same E-mode category which are defined by Aave Governance. You can enter E-Mode from your <0>Dashboard</0>. To learn more about E-Mode and applied restrictions in <1>FAQ</1> or <2>Aave V3 Technical Paper</2>."
-msgstr "El E-Mode aumenta tu LTV para una categoría seleccionada de activos, lo que significa que cuando el E-mode está habilitado, tendrás un mayor poder de préstamo sobre los activos de la misma categoría del E-mode que están definidos por el gobierno de Aave. Puedes entrar al E-Mode desde tu <0>Panel de control</0>. Para apreneder más sobre el E-Mode y las restricciones aplicables, puedes consultar las <1>Preguntas frecuentes</1> o el <2>Documento técnico de Aave V3</2>."
+msgid "E-Mode increases your LTV for a selected category of assets, meaning that when E-mode is enabled, you will have higher borrowing power over assets of the same E-mode category which are defined by ZeroLend Governance. You can enter E-Mode from your <0>Dashboard</0>. To learn more about E-Mode and applied restrictions in <1>FAQ</1> or <2>ZeroLend V3 Technical Paper</2>."
+msgstr "El E-Mode aumenta tu LTV para una categoría seleccionada de activos, lo que significa que cuando el E-mode está habilitado, tendrás un mayor poder de préstamo sobre los activos de la misma categoría del E-mode que están definidos por el gobierno de ZeroLend. Puedes entrar al E-Mode desde tu <0>Panel de control</0>. Para apreneder más sobre el E-Mode y las restricciones aplicables, puedes consultar las <1>Preguntas frecuentes</1> o el <2>Documento técnico de ZeroLend V3</2>."
 
 #: src/modules/reserve-overview/Gho/GhoInterestRateGraph.tsx
 msgid "Effective interest rate"
@@ -1085,8 +1085,8 @@ msgid "Funds in the Safety Module"
 msgstr "Fondos en el módulo de seguridad"
 
 #: src/modules/reserve-overview/Gho/GhoReserveConfiguration.tsx
-msgid "GHO is a native decentralized, collateral-backed digital asset pegged to USD. It is created by users via borrowing against multiple collateral. When user repays their GHO borrow position, the protocol burns that user's GHO. All the interest payments accrued by minters of GHO would be directly transferred to the AaveDAO treasury."
-msgstr "GHO es un activo nativo descentralizado, digital y respaldado por garantía, vinculado al USD. Es creado por los usuarios que lo toman prestado contra múltiples garantías. Cuando el usuario paga su posición de préstamo de GHO, el protocolo quema el GHO de ese usuario. Todos los pagos de interés acumulados por los acuñadores de GHO serán transferidos directamente a la tesorería de la DAO de Aave."
+msgid "GHO is a native decentralized, collateral-backed digital asset pegged to USD. It is created by users via borrowing against multiple collateral. When user repays their GHO borrow position, the protocol burns that user's GHO. All the interest payments accrued by minters of GHO would be directly transferred to the ZeroLend treasury."
+msgstr "GHO es un activo nativo descentralizado, digital y respaldado por garantía, vinculado al USD. Es creado por los usuarios que lo toman prestado contra múltiples garantías. Cuando el usuario paga su posición de préstamo de GHO, el protocolo quema el GHO de ese usuario. Todos los pagos de interés acumulados por los acuñadores de GHO serán transferidos directamente a la tesorería de la DAO de ZeroLend."
 
 #: src/modules/staking/GetABPToken.tsx
 #: src/modules/staking/GetABPTokenModal.tsx
@@ -1458,8 +1458,8 @@ msgid "Minimum GHO borrow amount"
 msgstr "Cantidad de préstamo mínima de GHO"
 
 #: src/modules/reserve-overview/Gho/GhoDiscountCalculator.tsx
-msgid "Minimum staked Aave amount"
-msgstr "Cantidad mínima de Aave stakeado"
+msgid "Minimum staked ZeroLend amount"
+msgstr "Cantidad mínima de ZeroLend stakeado"
 
 #: src/layouts/MoreMenu.tsx
 msgid "More"
@@ -1760,8 +1760,8 @@ msgid "Read more here."
 msgstr "Más información aquí."
 
 #: src/components/infoTooltips/ReadOnlyModeTooltip.tsx
-msgid "Read-only mode allows to see address positions in Aave, but you won't be able to perform transactions."
-msgstr "El modo de solo lectura permite ver las posiciones de las direcciones en Aave, pero no podrás realizar transacciones."
+msgid "Read-only mode allows to see address positions in ZeroLend, but you won't be able to perform transactions."
+msgstr "El modo de solo lectura permite ver las posiciones de las direcciones en ZeroLend, pero no podrás realizar transacciones."
 
 #: src/layouts/WalletWidget.tsx
 msgid "Read-only mode."
@@ -1842,8 +1842,8 @@ msgid "Reserve factor"
 msgstr "Factor de reserva"
 
 #: src/components/infoTooltips/ReserveFactorTooltip.tsx
-msgid "Reserve factor is a percentage of interest which goes to a {0} that is controlled by Aave governance to promote ecosystem growth."
-msgstr "El factor de reserva es un porcentaje de interés que va a un {0} que es controlado por el gobierno de Aave para promover el crecimiento del ecosistema."
+msgid "Reserve factor is a percentage of interest which goes to a {0} that is controlled by ZeroLend governance to promote ecosystem growth."
+msgstr "El factor de reserva es un porcentaje de interés que va a un {0} que es controlado por el gobierno de ZeroLend para promover el crecimiento del ecosistema."
 
 #: src/modules/reserve-overview/ReserveConfigurationWrapper.tsx
 msgid "Reserve status & configuration"
@@ -2126,8 +2126,8 @@ msgid "State"
 msgstr "Estado"
 
 #: src/components/infoTooltips/FixedAPYTooltip.tsx
-msgid "Static interest rate that is determined by Aave Governance. This rate may be changed over time depending on the need for the GHO supply to contract/expand. <0>Learn more</0>"
-msgstr "Tasa de interés estática determinada por el Gobierno de Aave. Esta tasa puede ser cambiada con el tiempo dependiendo de la necesidad de que el suministro de GHO se reduzca/expanda. <0>Aprende más</0>"
+msgid "Static interest rate that is determined by ZeroLend Governance. This rate may be changed over time depending on the need for the GHO supply to contract/expand. <0>Learn more</0>"
+msgstr "Tasa de interés estática determinada por el Gobierno de ZeroLend. Esta tasa puede ser cambiada con el tiempo dependiendo de la necesidad de que el suministro de GHO se reduzca/expanda. <0>Aprende más</0>"
 
 #: src/components/transactions/Supply/SupplyModalContent.tsx
 msgid "Supplied"
@@ -2282,12 +2282,12 @@ msgid "The % of your total borrowing power used. This is based on the amount of 
 msgstr "El % de tu poder de préstamo total utilizado. Esto se basa en la cantidad de tu garantía suministrada y la cantidad total que puedes pedir prestado."
 
 #: src/modules/staking/GetABPTokenModal.tsx
-msgid "The Aave Balancer Pool Token (ABPT) is a liquidity pool token. You can receive ABPT by depositing a combination of AAVE + ETH in the Balancer liquidity pool. You can then stake your BPT in the Safety Module to secure the protocol and earn Safety Incentives."
-msgstr "El Aave Balancer Pool Token (ABPT) es un token del pool de liquidez. Puedes recibir ABPT depositando una combinación de AAVE + ETH en el pool de liquidez de Balancer. Luego puedes stakear tus BPT en el módulo de seguridad para asegurar el protocolo y ganar incentivos de seguridad."
+msgid "The ZeroLend Balancer Pool Token (ABPT) is a liquidity pool token. You can receive ABPT by depositing a combination of AAVE + ETH in the Balancer liquidity pool. You can then stake your BPT in the Safety Module to secure the protocol and earn Safety Incentives."
+msgstr "El ZeroLend Balancer Pool Token (ABPT) es un token del pool de liquidez. Puedes recibir ABPT depositando una combinación de AAVE + ETH en el pool de liquidez de Balancer. Luego puedes stakear tus BPT en el módulo de seguridad para asegurar el protocolo y ganar incentivos de seguridad."
 
 #: src/modules/reserve-overview/Gho/GhoReserveTopDetails.tsx
-msgid "The Aave Protocol is programmed to always use the price of 1 GHO = $1. This is different from using market pricing via oracles for other crypto assets. This creates stabilizing arbitrage opportunities when the price of GHO fluctuates."
-msgstr "El Protocolo Aave está programado para usar siempre el precio de 1 GHO = $1. Esto es diferente del uso del precio de mercado a través de oráculos para otros criptoactivos. Esto crea oportunidades de arbitraje estabilizadoras cuando el precio de GHO fluctúa."
+msgid "The ZeroLend Protocol is programmed to always use the price of 1 GHO = $1. This is different from using market pricing via oracles for other crypto assets. This creates stabilizing arbitrage opportunities when the price of GHO fluctuates."
+msgstr "El Protocolo ZeroLend está programado para usar siempre el precio de 1 GHO = $1. Esto es diferente del uso del precio de mercado a través de oráculos para otros criptoactivos. Esto crea oportunidades de arbitraje estabilizadoras cuando el precio de GHO fluctúa."
 
 #: src/components/infoTooltips/MaxLTVTooltip.tsx
 msgid "The Maximum LTV ratio represents the maximum borrowing power of a specific collateral. For example, if a collateral has an LTV of 75%, the user can borrow up to 0.75 worth of ETH in the principal currency for every 1 ETH worth of collateral."
@@ -2379,8 +2379,8 @@ msgid "There was some error. Please try changing the parameters or <0><1>copy th
 msgstr "Hubo un error. Por favor intenta cambiar los parámetros o <0><1>copiar el error</1></0>"
 
 #: src/modules/markets/MarketAssetsListContainer.tsx
-msgid "These assets are temporarily frozen or paused by Aave community decisions, meaning that further supply / borrow, or rate swap of these assets are unavailable. Withdrawals and debt repayments are allowed. Follow the <0>Aave governance forum</0> for further updates."
-msgstr "Estos activos están temporalmente congelados o pausados por decisiones de la comunidad de Aave, lo que significa que no se puede suministrar / tomar prestado o intercambiar tasas de estos activos. Se permiten retiros y pagos de deuda. Sigue el <0>foro de gobierno de Aave</0> para más actualizaciones."
+msgid "These assets are temporarily frozen or paused by ZeroLend community decisions, meaning that further supply / borrow, or rate swap of these assets are unavailable. Withdrawals and debt repayments are allowed. Follow the <0>ZeroLend governance forum</0> for further updates."
+msgstr "Estos activos están temporalmente congelados o pausados por decisiones de la comunidad de ZeroLend, lo que significa que no se puede suministrar / tomar prestado o intercambiar tasas de estos activos. Se permiten retiros y pagos de deuda. Sigue el <0>foro de gobierno de ZeroLend</0> para más actualizaciones."
 
 #: src/components/transactions/Withdraw/WithdrawModalContent.tsx
 msgid "These funds have been borrowed and are not available for withdrawal at this time."
@@ -2419,20 +2419,20 @@ msgid "This asset has reached its supply cap. Nothing is available to be supplie
 msgstr "Este activo ha alcanzado su límite de suministro. No queda nada disponible para ser suministrado desde este mercado."
 
 #: src/components/infoTooltips/FrozenTooltip.tsx
-msgid "This asset is frozen due to an Aave Protocol Governance decision. <0>More details</0>"
-msgstr "Este activo está congelado debido a una decisión del Gobierno del Protocolo Aave. <0>More información</0>"
+msgid "This asset is frozen due to an ZeroLend Protocol Governance decision. <0>More details</0>"
+msgstr "Este activo está congelado debido a una decisión del Gobierno del Protocolo ZeroLend. <0>More información</0>"
 
 #: src/components/infoTooltips/RenFILToolTip.tsx
-msgid "This asset is frozen due to an Aave Protocol Governance decision. On the 20th of December 2022, renFIL will no longer be supported and cannot be bridged back to its native network. It is recommended to withdraw supply positions and repay borrow positions so that renFIL can be bridged back to FIL before the deadline. After this date, it will no longer be possible to convert renFIL to FIL. <0>More details</0>"
-msgstr "Este activo está congelado debido a una decisión del Gobierno del Protocolo Aave. El 20 de diciembre de 2022, renFIL ya no será compatible y no se podrá conectar de nuevo a su red nativa. Se recomienda retirar las posiciones de suministro y pagar las posiciones de préstamo para que renFIL se pueda convertir de nuevo a FIL antes de la fecha límite. Después de esta fecha, ya no será posible convertir renFIL a FIL. <0>Más detalles</0>"
+msgid "This asset is frozen due to an ZeroLend Protocol Governance decision. On the 20th of December 2022, renFIL will no longer be supported and cannot be bridged back to its native network. It is recommended to withdraw supply positions and repay borrow positions so that renFIL can be bridged back to FIL before the deadline. After this date, it will no longer be possible to convert renFIL to FIL. <0>More details</0>"
+msgstr "Este activo está congelado debido a una decisión del Gobierno del Protocolo ZeroLend. El 20 de diciembre de 2022, renFIL ya no será compatible y no se podrá conectar de nuevo a su red nativa. Se recomienda retirar las posiciones de suministro y pagar las posiciones de préstamo para que renFIL se pueda convertir de nuevo a FIL antes de la fecha límite. Después de esta fecha, ya no será posible convertir renFIL a FIL. <0>Más detalles</0>"
 
 #: src/modules/reserve-overview/ReserveConfiguration.tsx
-msgid "This asset is frozen due to an Aave community decision. <0>More details</0>"
-msgstr "Este activo está congelado debido a una decisión de la comunidad de Aave. <0>Más información</0>"
+msgid "This asset is frozen due to an ZeroLend community decision. <0>More details</0>"
+msgstr "Este activo está congelado debido a una decisión de la comunidad de ZeroLend. <0>Más información</0>"
 
 #: src/components/Warnings/BUSDOffBoardingWarning.tsx
-msgid "This asset is planned to be offboarded due to an Aave Protocol Governance decision. <0>More details</0>"
-msgstr "Está previsto que este activo se desvincule debido a una decisión del Gobierno del Protocolo Aave. <0>Más detalles</0>"
+msgid "This asset is planned to be offboarded due to an ZeroLend Protocol Governance decision. <0>More details</0>"
+msgstr "Está previsto que este activo se desvincule debido a una decisión del Gobierno del Protocolo ZeroLend. <0>Más detalles</0>"
 
 #: src/components/infoTooltips/GasTooltip.tsx
 msgid "This gas calculation is only an estimation. Your wallet will set the price of the transaction. You can modify the gas settings directly from your wallet provider."
@@ -2476,8 +2476,8 @@ msgid "To borrow you need to supply any asset to be used as collateral."
 msgstr "Para tomar prestado, necesitas suministrar cualquier activo para ser utilizado como garantía."
 
 #: src/components/infoTooltips/ApprovalTooltip.tsx
-msgid "To continue, you need to grant Aave smart contracts permission to move your funds from your wallet. Depending on the asset and wallet you use, it is done by signing the permission message (gas free), or by submitting an approval transaction (requires gas). <0>Learn more</0>"
-msgstr "Para continuar, necesitas otorgar permiso a los contratos inteligentes de Aave para mover tus fondos de tu cartera. Según el activo y la cartera que uses, se hace firmando el mensaje de permiso (sin coste de gas), o enviando una transacción de aprobación (requiere coste de gas). <0>Aprende más</0>"
+msgid "To continue, you need to grant ZeroLend smart contracts permission to move your funds from your wallet. Depending on the asset and wallet you use, it is done by signing the permission message (gas free), or by submitting an approval transaction (requires gas). <0>Learn more</0>"
+msgstr "Para continuar, necesitas otorgar permiso a los contratos inteligentes de ZeroLend para mover tus fondos de tu cartera. Según el activo y la cartera que uses, se hace firmando el mensaje de permiso (sin coste de gas), o enviando una transacción de aprobación (requiere coste de gas). <0>Aprende más</0>"
 
 #: src/components/transactions/Emode/EmodeModalContent.tsx
 msgid "To enable E-mode for the {0} category, all borrow positions outside of this category must be closed."
@@ -2816,8 +2816,8 @@ msgid "With a voting power of <0/>"
 msgstr "Con un poder de votación de <0/>"
 
 #: src/modules/faucet/FaucetTopPanel.tsx
-msgid "With testnet Faucet you can get free assets to test the Aave Protocol. Make sure to switch your wallet provider to the appropriate testnet network, select desired asset, and click ‘Faucet’ to get tokens transferred to your wallet. The assets on a testnet are not “real,” meaning they have no monetary value. <0>Learn more</0>"
-msgstr "Con la testnet Faucet puedes obtener activos gratuitos para probar el Protocolo Aave. Asegúrate de cambiar tu proveedor de cartera a la red de testnet adecuada, selecciona el activo deseado y haz clic en \"Faucet\" para obtener tokens transferidos a tu cartera. Los activos de una testnet no son \"reales\", lo que significada que no tienen valor monetario. <0>Aprende más</0>"
+msgid "With testnet Faucet you can get free assets to test the ZeroLend Protocol. Make sure to switch your wallet provider to the appropriate testnet network, select desired asset, and click ‘Faucet’ to get tokens transferred to your wallet. The assets on a testnet are not “real,” meaning they have no monetary value. <0>Learn more</0>"
+msgstr "Con la testnet Faucet puedes obtener activos gratuitos para probar el Protocolo ZeroLend. Asegúrate de cambiar tu proveedor de cartera a la red de testnet adecuada, selecciona el activo deseado y haz clic en \"Faucet\" para obtener tokens transferidos a tu cartera. Los activos de una testnet no son \"reales\", lo que significada que no tienen valor monetario. <0>Aprende más</0>"
 
 #: src/components/transactions/Withdraw/WithdrawModal.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListItem.tsx
@@ -3182,4 +3182,3 @@ msgstr "{title}"
 #: src/components/CircleIcon.tsx
 msgid "{tooltipText}"
 msgstr "{tooltipText}"
-

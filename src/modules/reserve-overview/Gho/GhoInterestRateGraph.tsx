@@ -89,7 +89,7 @@ export const GhoInterestRateGraph = withTooltip<AreaProps, TooltipData>(
     const isXsm = useMediaQuery(theme.breakpoints.down('xsm'));
 
     // Tooltip Styles
-    const accentColorDark = theme.palette.mode === 'light' ? '#383D511F' : '#a5a8b647';
+    const accentColorDark = theme.palette.mode === 'light' ? '#27264C1F' : '#a5a8b647';
     const tooltipStyles = {
       ...defaultStyles,
       padding: '8px 12px',

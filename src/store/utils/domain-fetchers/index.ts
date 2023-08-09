@@ -1,3 +1,4 @@
-import { getEnsDomain } from './ens';
+import * as star from './starprotocol';
+import * as znsis from './znsis';
 
-export const domainFetchers = [getEnsDomain];
+export const domainFetchers = [znsis.getEnsDomain, star.getEnsDomain];

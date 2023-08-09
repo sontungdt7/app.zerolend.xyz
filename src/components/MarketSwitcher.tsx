@@ -188,7 +188,7 @@ export const MarketSwitcher = () => {
                       color: '#A5A8B6',
                       px: 2,
                       borderRadius: '12px',
-                      backgroundColor: '#383D51',
+                      backgroundColor: '#27264C',
                     }}
                   >
                     <Typography variant="subheader2">V2</Typography>
@@ -224,7 +224,7 @@ export const MarketSwitcher = () => {
       <Box>
         <Typography variant="subheader2" color="text.secondary" sx={{ px: 4, pt: 2 }}>
           <Trans>
-            {ENABLE_TESTNET || STAGING_ENV ? 'Select Aave Testnet Market' : 'Select Aave Market'}
+            {ENABLE_TESTNET || STAGING_ENV ? 'Select ZeroLend Testnet Market' : 'Select ZeroLend Market'}
           </Trans>
         </Typography>
       </Box>
@@ -243,9 +243,8 @@ export const MarketSwitcher = () => {
               width: '100%',
               height: '36px',
               background: theme.palette.primary.main,
-              border: `1px solid ${
-                theme.palette.mode === 'dark' ? 'rgba(235, 235, 237, 0.12)' : '#1B2030'
-              }`,
+              border: `1px solid ${theme.palette.mode === 'dark' ? 'rgba(235, 235, 237, 0.12)' : '#1B2030'
+                }`,
               borderRadius: '6px',
               marginTop: '16px',
               marginBottom: '12px',
@@ -256,7 +255,7 @@ export const MarketSwitcher = () => {
               value={SelectedMarketVersion.V3}
               data-cy={`markets_switch_button_v3`}
               sx={{
-                backgroundColor: theme.palette.mode === 'dark' ? '#EAEBEF' : '#383D51',
+                backgroundColor: theme.palette.mode === 'dark' ? '#EAEBEF' : '#27264C',
                 '&.Mui-selected, &.Mui-selected:hover': {
                   backgroundColor: theme.palette.mode === 'dark' ? '#292E41' : '#FFFFFF',
                   boxShadow: '0px 1px 0px rgba(0, 0, 0, 0.05)',
@@ -269,13 +268,13 @@ export const MarketSwitcher = () => {
                 sx={
                   selectedMarketVersion === SelectedMarketVersion.V3
                     ? {
-                        backgroundImage: (theme) => theme.palette.gradients.aaveGradient,
-                        backgroundClip: 'text',
-                        color: 'transparent',
-                      }
+                      backgroundImage: (theme) => theme.palette.gradients.aaveGradient,
+                      backgroundClip: 'text',
+                      color: 'transparent',
+                    }
                     : {
-                        color: theme.palette.mode === 'dark' ? '#0F121D' : '#FFFFFF',
-                      }
+                      color: theme.palette.mode === 'dark' ? '#0F121D' : '#FFFFFF',
+                    }
                 }
               >
                 <Trans>Version 3</Trans>
@@ -285,7 +284,7 @@ export const MarketSwitcher = () => {
               value={SelectedMarketVersion.V2}
               data-cy={`markets_switch_button_v2`}
               sx={{
-                backgroundColor: theme.palette.mode === 'dark' ? '#EAEBEF' : '#383D51',
+                backgroundColor: theme.palette.mode === 'dark' ? '#EAEBEF' : '#27264C',
                 '&.Mui-selected, &.Mui-selected:hover': {
                   backgroundColor: theme.palette.mode === 'dark' ? '#292E41' : '#FFFFFF',
                   boxShadow: '0px 1px 0px rgba(0, 0, 0, 0.05)',
@@ -298,13 +297,13 @@ export const MarketSwitcher = () => {
                 sx={
                   selectedMarketVersion === SelectedMarketVersion.V2
                     ? {
-                        backgroundImage: (theme) => theme.palette.gradients.aaveGradient,
-                        backgroundClip: 'text',
-                        color: 'transparent',
-                      }
+                      backgroundImage: (theme) => theme.palette.gradients.aaveGradient,
+                      backgroundClip: 'text',
+                      color: 'transparent',
+                    }
                     : {
-                        color: theme.palette.mode === 'dark' ? '#0F121D' : '#FFFFFF',
-                      }
+                      color: theme.palette.mode === 'dark' ? '#0F121D' : '#FFFFFF',
+                    }
                 }
               >
                 <Trans>Version 2</Trans>
@@ -325,7 +324,7 @@ export const MarketSwitcher = () => {
               '.MuiListItemIcon-root': { minWidth: 'unset' },
               display:
                 (market.v3 && selectedMarketVersion === SelectedMarketVersion.V2) ||
-                (!market.v3 && selectedMarketVersion === SelectedMarketVersion.V3)
+                  (!market.v3 && selectedMarketVersion === SelectedMarketVersion.V3)
                   ? 'none'
                   : 'flex',
             }}

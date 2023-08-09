@@ -396,7 +396,7 @@ const GhoDiscountParametersComponent: React.FC<{
           />
         </DiscountModelParameter>
         <DiscountModelParameter
-          title={<Trans>Minimum staked Aave amount</Trans>}
+          title={<Trans>Minimum staked ZeroLend amount</Trans>}
           fullWidth={downToXsm}
           loading={loading}
         >
@@ -428,7 +428,7 @@ const GhoDiscountParametersComponent: React.FC<{
       </Box>
       <Typography variant="caption" color="text.secondary">
         <Trans>
-          Discount parameters are decided by the Aave community and may be changed over time. Check
+          Discount parameters are decided by the ZeroLend community and may be changed over time. Check
           Governance for updates and vote to participate.{' '}
           <Link
             href="https://governance.aave.com"

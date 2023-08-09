@@ -5,7 +5,7 @@ import { Link } from '../primitives/Link';
 export const BUSDOffBoardingWarning = () => {
   return (
     <Trans>
-      This asset is planned to be offboarded due to an Aave Protocol Governance decision.{' '}
+      This asset is planned to be offboarded due to an ZeroLend Protocol Governance decision.{' '}
       <Link
         href="https://governance.aave.com/t/arfc-busd-offboarding-plan/12170"
         sx={{ textDecoration: 'underline' }}

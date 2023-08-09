@@ -22,7 +22,9 @@ export const ReserveConfigurationWrapper: React.FC<ReserveConfigurationProps> = 
   const [displayGho] = useRootStore((store) => [store.displayGho]);
   const { breakpoints } = useTheme();
   const downToXsm = useMediaQuery(breakpoints.down('xsm'));
+
   const isGho = displayGho({ symbol: reserve.symbol, currentMarket });
+  console.log('fuck', isGho, reserve.symbol);
 
   return (
     <Paper sx={{ pt: 4, pb: 20, px: downToXsm ? 4 : 6 }}>

@@ -206,14 +206,14 @@ export const useGovernanceDelegate = (
           delegatee,
           nonce: String(aaveNonce),
           governanceToken: governanceConfig.aaveTokenAddress,
-          governanceTokenName: 'Aave Token',
+          governanceTokenName: 'ZeroLend Token',
           expiry: deadline,
         },
         {
           delegatee,
           nonce: String(stkAaveNonce),
           governanceToken: governanceConfig.stkAaveTokenAddress,
-          governanceTokenName: 'Staked Aave',
+          governanceTokenName: 'Staked ZeroLend',
           expiry: deadline,
         },
       ];

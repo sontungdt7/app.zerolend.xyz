@@ -55,22 +55,22 @@ export const ApyGraphContainer = ({
   );
 
   // Supply fields
-  const supplyFields: Fields = [{ name: 'liquidityRate', color: '#2EBAC6', text: 'Supply APR' }];
+  const supplyFields: Fields = [{ name: 'liquidityRate', color: '#12152B', text: 'Supply APR' }];
 
   // Borrow fields
   const borrowFields: Fields = [
     ...(reserve.stableBorrowRateEnabled
       ? ([
-          {
-            name: 'stableBorrowRate',
-            color: '#E7C6DF',
-            text: 'Borrow APR, stable',
-          },
-        ] as const)
+        {
+          name: 'stableBorrowRate',
+          color: '#E7C6DF',
+          text: 'Borrow APR, stable',
+        },
+      ] as const)
       : []),
     {
       name: 'variableBorrowRate',
-      color: '#B6509E',
+      color: '#12152B',
       text: 'Borrow APR, variable',
     },
   ];

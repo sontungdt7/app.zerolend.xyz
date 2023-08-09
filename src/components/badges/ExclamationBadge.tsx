@@ -20,7 +20,7 @@ export const ExclamationBadge: React.FC<ExclamationBadgeProps> = ({ size, iconPr
         width: size,
         height: size,
         borderRadius: '50%',
-        background: '#383D51',
+        background: '#27264C',
         ...iconSx,
       }}
       {...restIconProps}

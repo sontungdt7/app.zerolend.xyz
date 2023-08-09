@@ -154,7 +154,7 @@ export const GhoBanner = ({ reserve }: GhoBannerProps) => {
                 },
               })}
             >
-              <Trans>Meet GHO</Trans>
+              <Trans>Meet ONEZ</Trans>
             </Typography>
             <Typography
               sx={(theme) => ({
@@ -167,7 +167,7 @@ export const GhoBanner = ({ reserve }: GhoBannerProps) => {
               })}
               color="text.secondary"
             >
-              A decentralized, multi-collateralized stablecoin created by AaveDAO.
+              A decentralized, multi-collateralized stablecoin created by ZeroLend.
             </Typography>
           </Box>
           <Box

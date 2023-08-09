@@ -83,7 +83,7 @@ export const ReserveTopDetails = ({ underlyingAsset }: ReserveTopDetailsProps) =
             symbolsColor="#A5A8B6"
           />
           {loading ? (
-            <Skeleton width={16} height={16} sx={{ ml: 1, background: '#383D51' }} />
+            <Skeleton width={16} height={16} sx={{ ml: 1, background: '#27264C' }} />
           ) : (
             <CircleIcon tooltipText="View oracle contract" downToSM={downToSM}>
               <Link

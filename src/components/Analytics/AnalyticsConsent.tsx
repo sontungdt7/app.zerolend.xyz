@@ -73,8 +73,8 @@ export default function AnalyticsBanner() {
             : 'translateX(100%) translateY(100%)',
         }}
         buttonStyle={{
-          background: theme.palette.mode === 'dark' ? '#F7F7F9' : '#383D51',
-          color: theme.palette.mode === 'dark' ? '#383D51' : '#F7F7F9',
+          background: theme.palette.mode === 'dark' ? '#F7F7F9' : '#27264C',
+          color: theme.palette.mode === 'dark' ? '#27264C' : '#F7F7F9',
 
           fontSize: '14px',
           borderRadius: '4px',
@@ -87,8 +87,8 @@ export default function AnalyticsBanner() {
         }}
         declineButtonStyle={{
           // background:  '#F7F7F9',
-          background: theme.palette.mode === 'dark' ? '#383D51' : '#F7F7F9',
-          color: theme.palette.mode === 'dark' ? '#EAEBEF' : '#383D51',
+          background: theme.palette.mode === 'dark' ? '#27264C' : '#F7F7F9',
+          color: theme.palette.mode === 'dark' ? '#EAEBEF' : '#27264C',
 
           fontFamily: 'Inter',
           fontWeight: '500',
@@ -97,7 +97,7 @@ export default function AnalyticsBanner() {
           borderRadius: '4px',
           margin: '10px',
           // padding: '10px 20px',
-          border: `1px solid ${theme.palette.mode === 'dark' ? '#383D51' : '#EAEBEF'}`,
+          border: `1px solid ${theme.palette.mode === 'dark' ? '#27264C' : '#EAEBEF'}`,
           width: '172px',
           height: '36px',
           // padding: '0px',

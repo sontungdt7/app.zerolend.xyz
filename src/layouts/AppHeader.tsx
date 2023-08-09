@@ -123,20 +123,6 @@ export function AppHeader() {
           boxShadow: 'inset 0px -1px 0px rgba(242, 243, 247, 0.16)',
         })}
       >
-        <Box
-          component={Link}
-          href="/"
-          aria-label="Go to homepage"
-          sx={{
-            lineHeight: 0,
-            mr: 3,
-            transition: '0.3s ease all',
-            '&:hover': { opacity: 0.7 },
-          }}
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          <img src={uiConfig.appLogo} alt="An SVG of an eye" height={20} />
-        </Box>
         <Box sx={{ mr: sm ? 1 : 3 }}>
           {ENABLE_TESTNET && (
             <ContentWithTooltip tooltipContent={testnetTooltip} offset={[0, -4]} withoutHover>
@@ -145,7 +131,7 @@ export function AppHeader() {
                 size="small"
                 color="primary"
                 sx={{
-                  backgroundColor: '#B6509E',
+                  backgroundColor: '#12152B',
                   '&:hover, &.Mui-focusVisible': { backgroundColor: 'rgba(182, 80, 158, 0.7)' },
                 }}
               >

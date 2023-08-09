@@ -25,23 +25,38 @@ export const navigation: Navigation[] = [
     dataCy: 'menuMarkets',
   },
   {
-    link: ROUTES.staking,
-    title: t`Stake`,
-    dataCy: 'menuStake',
-    isVisible: () =>
-      process.env.NEXT_PUBLIC_ENABLE_STAKING === 'true' &&
-      process.env.NEXT_PUBLIC_ENV === 'prod' &&
-      !ENABLE_TESTNET,
+    link: 'https://docs.zerolend.xyz',
+    title: t`Documentation`,
+    dataCy: 'menuDocs',
   },
   {
-    link: ROUTES.governance,
-    title: t`Governance`,
-    dataCy: 'menuGovernance',
-    isVisible: () =>
-      process.env.NEXT_PUBLIC_ENABLE_GOVERNANCE === 'true' &&
-      process.env.NEXT_PUBLIC_ENV === 'prod' &&
-      !ENABLE_TESTNET,
+    link: 'https://docs.zerolend.xyz/audits',
+    title: t`Audits`,
+    dataCy: 'menuAudits',
   },
+  {
+    link: 'https://portal.zksync.io/bridge/',
+    title: t`Bridge`,
+    dataCy: 'menuBridge',
+  },
+  // {
+  //   link: ROUTES.staking,
+  //   title: t`Stake`,
+  //   dataCy: 'menuStake',
+  //   isVisible: () =>
+  //     process.env.NEXT_PUBLIC_ENABLE_STAKING === 'true' &&
+  //     process.env.NEXT_PUBLIC_ENV === 'prod' &&
+  //     !ENABLE_TESTNET,
+  // },
+  // {
+  //   link: ROUTES.governance,
+  //   title: t`Governance`,
+  //   dataCy: 'menuGovernance',
+  //   isVisible: () =>
+  //     process.env.NEXT_PUBLIC_ENABLE_GOVERNANCE === 'true' &&
+  //     process.env.NEXT_PUBLIC_ENV === 'prod' &&
+  //     !ENABLE_TESTNET,
+  // },
   {
     link: ROUTES.faucet,
     title: t`Faucet`,
@@ -69,12 +84,12 @@ const moreMenuItems: MoreMenuItem[] = [
 
 const fiatEnabled = process.env.NEXT_PUBLIC_FIAT_ON_RAMP;
 if (fiatEnabled === 'true') {
-  moreMenuItems.push({
-    link: 'https://global.transak.com',
-    makeLink: (walletAddress) =>
-      `${process.env.NEXT_PUBLIC_TRANSAK_APP_URL}/?apiKey=${process.env.NEXT_PUBLIC_TRANSAK_API_KEY}&walletAddress=${walletAddress}&disableWalletAddressForm=true`,
-    title: t`Buy Crypto With Fiat`,
-    icon: <CreditCardIcon />,
-  });
+  // moreMenuItems.push({
+  //   link: 'https://global.transak.com',
+  //   makeLink: (walletAddress) =>
+  //     `${process.env.NEXT_PUBLIC_TRANSAK_APP_URL}/?apiKey=${process.env.NEXT_PUBLIC_TRANSAK_API_KEY}&walletAddress=${walletAddress}&disableWalletAddressForm=true`,
+  //   title: t`Buy Crypto With Fiat`,
+  //   icon: <CreditCardIcon />,
+  // });
 }
 export const moreNavigation: MoreMenuItem[] = [...moreMenuItems];

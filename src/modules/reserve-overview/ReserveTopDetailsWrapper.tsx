@@ -52,7 +52,7 @@ export const ReserveTopDetailsWrapper = ({ underlyingAsset }: ReserveTopDetailsP
     return (
       <Box mr={3} sx={{ mr: 3, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         {loading ? (
-          <Skeleton variant="circular" width={40} height={40} sx={{ background: '#383D51' }} />
+          <Skeleton variant="circular" width={40} height={40} sx={{ background: '#27264C' }} />
         ) : (
           <img
             src={`/icons/tokens/${poolReserve.iconSymbol.toLowerCase()}.svg`}
@@ -67,7 +67,7 @@ export const ReserveTopDetailsWrapper = ({ underlyingAsset }: ReserveTopDetailsP
 
   const ReserveName = () => {
     return loading ? (
-      <Skeleton width={60} height={28} sx={{ background: '#383D51' }} />
+      <Skeleton width={60} height={28} sx={{ background: '#27264C' }} />
     ) : (
       <Typography variant={valueTypographyVariant}>{poolReserve.name}</Typography>
     );

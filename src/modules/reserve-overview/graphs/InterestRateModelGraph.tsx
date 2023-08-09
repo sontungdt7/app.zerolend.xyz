@@ -156,13 +156,13 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
     const formattedOptimalUtilizationRate = normalizeBN(reserve.optimalUsageRatio, 25).toNumber();
 
     // Tooltip Styles
-    const accentColorDark = theme.palette.mode === 'light' ? '#383D511F' : '#a5a8b647';
+    const accentColorDark = theme.palette.mode === 'light' ? '#27264C1F' : '#a5a8b647';
     const tooltipStyles = {
       ...defaultStyles,
       padding: '8px 12px',
       boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 10px rgba(0, 0, 0, 0.1)',
       borderRadius: '4px',
-      color: '#62677B',
+      color: '#383D51',
       fontSize: '12px',
       lineHeight: '16px',
       letterSpacing: '0.15px',
@@ -191,9 +191,9 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
     const yValueScale = useMemo(() => {
       const maxY = reserve.stableBorrowRateEnabled
         ? Math.max(
-            max(data, (d) => getStableBorrowRate(d)) as number,
-            max(data, (d) => getVariableBorrowRate(d)) as number
-          )
+          max(data, (d) => getStableBorrowRate(d)) as number,
+          max(data, (d) => getVariableBorrowRate(d)) as number
+        )
         : (max(data, (d) => getVariableBorrowRate(d)) as number);
       return scaleLinear({
         range: [innerHeight, 0],
@@ -252,7 +252,7 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
 
             {/* Variable Borrow APR Line */}
             <LinePath
-              stroke="#B6509E"
+              stroke="#12152B"
               strokeWidth={2}
               data={data}
               x={(d) => dateScale(getDate(d)) ?? 0}
@@ -327,7 +327,7 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
               textAnchor="middle"
               verticalAnchor="middle"
               fontSize="10px"
-              fill="#62677B"
+              fill="#383D51"
             >
               {`Current ${formattedCurrentUtilizationRate}%`}
             </Text>
@@ -348,7 +348,7 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
               textAnchor="middle"
               verticalAnchor="middle"
               fontSize="10px"
-              fill="#62677B"
+              fill="#383D51"
             >
               {`Optimal ${formattedOptimalUtilizationRate}%`}
             </Text>
@@ -443,7 +443,7 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
               >
                 {(tooltipData.utilization / 100) * parseFloat(reserve.totalLiquidityUSD) -
                   parseFloat(reserve.totalDebtUSD) >
-                0 ? (
+                  0 ? (
                   <>
                     <Typography variant="caption" color="text.secondary" sx={{ mr: 2 }}>
                       <Trans>Borrow amount to reach {tooltipData.utilization}% utilization</Trans>
@@ -455,7 +455,7 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
                         maximumFractionDigits: 2,
                       }).format(
                         (tooltipData.utilization / 100) * parseFloat(reserve.totalLiquidityUSD) -
-                          parseFloat(reserve.totalDebtUSD)
+                        parseFloat(reserve.totalDebtUSD)
                       )}
                     </Typography>
                   </>
@@ -474,7 +474,7 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
                       }).format(
                         Math.abs(
                           (tooltipData.utilization / 100) * parseFloat(reserve.totalLiquidityUSD) -
-                            parseFloat(reserve.totalDebtUSD)
+                          parseFloat(reserve.totalDebtUSD)
                         )
                       )}
                     </Typography>

@@ -147,8 +147,8 @@ export default function ProposalPage({
     minQuorumVotes,
     diff,
   } = proposal
-    ? formatProposal(proposal)
-    : {
+      ? formatProposal(proposal)
+      : {
         yaeVotes: 0,
         yaePercent: 0,
         nayPercent: 0,
@@ -263,7 +263,7 @@ export default function ProposalPage({
                             Link: 'Share on lens',
                           })
                         }
-                        href={`https://lenster.xyz/?url=${url}&text=Check out this proposal on aave governance 👻👻 - ${ipfs.title}&hashtags=Aave&preview=true`}
+                        href={`https://lenster.xyz/?url=${url}&text=Check out this proposal on aave governance 👻👻 - ${ipfs.title}&hashtags=ZeroLend&preview=true`}
                         startIcon={
                           <LensIcon
                             color={
@@ -315,9 +315,9 @@ export default function ProposalPage({
                           if (!_src) return null;
                           const src = /^\.\.\//.test(_src)
                             ? _src.replace(
-                                '../',
-                                'https://raw.githubusercontent.com/aave/aip/main/content/'
-                              )
+                              '../',
+                              'https://raw.githubusercontent.com/aave/aip/main/content/'
+                            )
                             : _src;
                           return <CenterAlignedImage src={src} alt={alt} />;
                         },
@@ -636,7 +636,7 @@ export default function ProposalPage({
                             Link: 'Seatbelt Report',
                           })
                         }
-                        href={`https://github.com/bgd-labs/seatbelt-for-ghosts/tree/master/reports/Aave/0xEC568fffba86c094cf06b22134B23074DFE2252c/${String(
+                        href={`https://github.com/bgd-labs/seatbelt-for-ghosts/tree/master/reports/ZeroLend/0xEC568fffba86c094cf06b22134B23074DFE2252c/${String(
                           proposal.id
                         ).padStart(3, '0')}.md`}
                         variant="outlined"

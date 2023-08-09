@@ -54,7 +54,7 @@ export const createGhoSlice: StateCreator<
     ghoReserveDataFetched: false,
     ghoUserDataFetched: false,
     displayGho: ({ symbol, currentMarket }: GhoUtilMintingAvailableParams): boolean => {
-      return symbol === 'GHO' && GHO_SUPPORTED_MARKETS.includes(currentMarket);
+      return symbol === 'ONEZ' && GHO_SUPPORTED_MARKETS.includes(currentMarket);
     },
     ghoUserQualifiesForDiscount: (futureBorrowAmount = '0') => {
       const ghoReserveDataFetched = get().ghoReserveDataFetched;

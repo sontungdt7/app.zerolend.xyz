@@ -19,7 +19,7 @@ export const InterestRateModelGraphContainer = ({
 }: InteresetRateModelGraphContainerProps): JSX.Element => {
   const CHART_HEIGHT = 155;
   const fields: Fields = [
-    { name: 'variableBorrowRate', text: 'Borrow APR, variable', color: '#B6509E' },
+    { name: 'variableBorrowRate', text: 'Borrow APR, variable', color: '#12152B' },
     ...(reserve.stableBorrowRateEnabled
       ? ([{ name: 'stableBorrowRate', text: 'Borrow APR, stable', color: '#E7C6DF' }] as const)
       : []),

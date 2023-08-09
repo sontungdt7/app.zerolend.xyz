@@ -41,7 +41,7 @@ export const GhoReserveTopDetails = () => {
         title={
           <TextWithTooltip text={<Trans>Price</Trans>}>
             <Trans>
-              The Aave Protocol is programmed to always use the price of 1 GHO = $1. This is
+              The ZeroLend Protocol is programmed to always use the price of 1 GHO = $1. This is
               different from using market pricing via oracles for other crypto assets. This creates
               stabilizing arbitrage opportunities when the price of GHO fluctuates.
             </Trans>

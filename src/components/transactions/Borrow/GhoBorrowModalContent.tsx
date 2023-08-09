@@ -182,7 +182,7 @@ export const GhoBorrowModalContent = ({
 
   const futureDiscountedAmount =
     ghoUserData.userGhoBorrowBalance + Number(amount) >=
-    ghoReserveData.ghoMinDebtTokenBalanceForDiscount
+      ghoReserveData.ghoMinDebtTokenBalanceForDiscount
       ? ghoUserData.userGhoAvailableToBorrowAtDiscount
       : 0;
   const futureBorrowAPY = weightedAverageAPY(
@@ -333,7 +333,7 @@ export const GhoBorrowModalContent = ({
         />
       )}
 
-      <ParameterChangewarning underlyingAsset={underlyingAsset} />
+      {/* <ParameterChangewarning underlyingAsset={underlyingAsset} /> */}
 
       <BorrowActions
         poolReserve={poolReserve}

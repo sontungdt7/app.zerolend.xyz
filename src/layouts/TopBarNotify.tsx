@@ -87,7 +87,7 @@ export default function TopBarNotify({ notifyText, learnMoreLink }: TopBarNotify
                   minWidth: '90px',
                   marginLeft: 5,
                   height: '24px',
-                  background: '#383D51',
+                  background: '#27264C',
                   color: '#EAEBEF',
                 }}
               >

@@ -20,7 +20,7 @@ const {
 const FONT = 'Inter, Arial';
 
 declare module '@mui/material/styles/createPalette' {
-  interface PaletteColor extends ColorPartial {}
+  interface PaletteColor extends ColorPartial { }
 
   interface TypeText {
     muted: string;
@@ -74,10 +74,10 @@ interface TypographyCustomVariants {
 }
 
 declare module '@mui/material/styles' {
-  interface TypographyVariants extends TypographyCustomVariants {}
+  interface TypographyVariants extends TypographyCustomVariants { }
 
   // allow configuration using `createTheme`
-  interface TypographyVariantsOptions extends TypographyCustomVariants {}
+  interface TypographyVariantsOptions extends TypographyCustomVariants { }
 
   interface BreakpointOverrides {
     xsm: true;
@@ -135,8 +135,8 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
     palette: {
       mode,
       primary: {
-        main: getColor('#383D51', '#EAEBEF'),
-        light: getColor('#62677B', '#F1F1F3'),
+        main: getColor('#27264C', '#EAEBEF'),
+        light: getColor('#383D51', '#F1F1F3'),
         dark: getColor('#292E41', '#D2D4DC'),
         contrast: getColor('#FFFFFF', '#0F121D'),
       },
@@ -175,17 +175,17 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
       },
       text: {
         primary: getColor('#303549', '#F1F1F3'),
-        secondary: getColor('#62677B', '#A5A8B6'),
-        disabled: getColor('#D2D4DC', '#62677B'),
+        secondary: getColor('#383D51', '#A5A8B6'),
+        disabled: getColor('#D2D4DC', '#383D51'),
         muted: getColor('#A5A8B6', '#8E92A3'),
-        highlight: getColor('#383D51', '#C9B3F9'),
+        highlight: getColor('#27264C', '#C9B3F9'),
       },
       background: {
         default: getColor('#F1F1F3', '#1B2030'),
         paper: getColor('#FFFFFF', '#292E41'),
-        surface: getColor('#F7F7F9', '#383D51'),
-        surface2: getColor('#F9F9FB', '#383D51'),
-        header: getColor('#2B2D3C', '#1B2030'),
+        surface: getColor('#F7F7F9', '#27264C'),
+        surface2: getColor('#F9F9FB', '#27264C'),
+        header: getColor('#12152B', '#1B2030'),
         disabled: getColor('#EAEBEF', '#EBEBEF14'),
       },
       divider: getColor('#EAEBEF', '#EBEBEF14'),
@@ -198,10 +198,10 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
         focus: getColor('#F1F1F3', '#EBEBEF1F'),
       },
       other: {
-        standardInputLine: getColor('#383D511F', '#EBEBEF6B'),
+        standardInputLine: getColor('#27264C1F', '#EBEBEF6B'),
       },
       gradients: {
-        aaveGradient: 'linear-gradient(248.86deg, #B6509E 10.51%, #2EBAC6 93.41%)',
+        aaveGradient: 'linear-gradient(248.86deg, #12152B 10.51%, #12152B 93.41%)',
         newGradient: 'linear-gradient(79.67deg, #8C3EBC 0%, #007782 95.82%)',
       },
     },
@@ -400,10 +400,10 @@ export function getThemedComponents(theme: Theme) {
         styleOverrides: {
           root: {
             '& .MuiSlider-thumb': {
-              color: theme.palette.mode === 'light' ? '#62677B' : '#C9B3F9',
+              color: theme.palette.mode === 'light' ? '#383D51' : '#C9B3F9',
             },
             '& .MuiSlider-track': {
-              color: theme.palette.mode === 'light' ? '#383D51' : '#9C93B3',
+              color: theme.palette.mode === 'light' ? '#27264C' : '#9C93B3',
             },
           },
         },
@@ -436,7 +436,7 @@ export function getThemedComponents(theme: Theme) {
               color: theme.palette.common.white,
               border: '1px solid',
               borderColor: '#EBEBED1F',
-              backgroundColor: '#383D51',
+              backgroundColor: '#27264C',
               '&:hover, &.Mui-focusVisible': {
                 backgroundColor: theme.palette.background.header,
               },

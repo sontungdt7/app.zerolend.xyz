@@ -1,5 +1,5 @@
 import { ChainId, ChainIdToNetwork } from '@aave/contract-helpers';
-import { StaticJsonRpcProvider } from '@ethersproject/providers';
+import { JsonRpcProvider, StaticJsonRpcProvider } from '@ethersproject/providers';
 import { providers as ethersProviders } from 'ethers';
 
 import {
@@ -37,14 +37,14 @@ const FORK_BASE_CHAIN_ID =
 const FORK_CHAIN_ID =
   Number(process.env.NEXT_PUBLIC_FORK_CHAIN_ID) ||
   Number(global?.window?.localStorage.getItem('forkNetworkId') || 3030);
-const FORK_RPC_URL =
-  process.env.NEXT_PUBLIC_FORK_URL_RPC ||
-  global?.window?.localStorage.getItem('forkRPCUrl') ||
-  'http://127.0.0.1:8545';
-const FORK_WS_RPC_URL =
-  process.env.NEXT_PUBLIC_FORK_URL_WS_RPC ||
-  global?.window?.localStorage.getItem('forkWsRPCUrl') ||
-  'ws://127.0.0.1:8545';
+// const FORK_RPC_URL =
+//   process.env.NEXT_PUBLIC_FORK_URL_RPC ||
+//   global?.window?.localStorage.getItem('forkRPCUrl') ||
+//   'http://127.0.0.1:8545';
+// const FORK_WS_RPC_URL =
+//   process.env.NEXT_PUBLIC_FORK_URL_WS_RPC ||
+//   global?.window?.localStorage.getItem('forkWsRPCUrl') ||
+//   'ws://127.0.0.1:8545';
 
 /**
  * Generates network configs based on networkConfigs & fork settings.
@@ -52,18 +52,18 @@ const FORK_WS_RPC_URL =
  */
 export const networkConfigs = Object.keys(_networkConfigs).reduce((acc, value) => {
   acc[value] = _networkConfigs[value];
-  if (FORK_ENABLED && Number(value) === FORK_BASE_CHAIN_ID) {
-    acc[FORK_CHAIN_ID] = {
-      ..._networkConfigs[value],
-      name: `${_networkConfigs[value].name} Fork`,
-      isFork: true,
-      privateJsonRPCUrl: FORK_RPC_URL,
-      privateJsonRPCWSUrl: FORK_WS_RPC_URL,
-      publicJsonRPCUrl: [],
-      publicJsonRPCWSUrl: '',
-      underlyingChainId: FORK_BASE_CHAIN_ID,
-    };
-  }
+  // if (FORK_ENABLED && Number(value) === FORK_BASE_CHAIN_ID) {
+  //   acc[FORK_CHAIN_ID] = {
+  //     ..._networkConfigs[value],
+  //     name: `${_networkConfigs[value].name} Fork`,
+  //     isFork: true,
+  //     privateJsonRPCUrl: FORK_RPC_URL,
+  //     privateJsonRPCWSUrl: FORK_WS_RPC_URL,
+  //     publicJsonRPCUrl: [],
+  //     publicJsonRPCWSUrl: '',
+  //     underlyingChainId: FORK_BASE_CHAIN_ID,
+  //   };
+  // }
   return acc;
 }, {} as { [key: string]: BaseNetworkConfig });
 
@@ -132,7 +132,7 @@ const linkBuilder =
     return baseUrl;
   };
 
-export function getNetworkConfig(chainId: ChainId): NetworkConfig {
+export function getNetworkConfig(chainId: number): NetworkConfig {
   const config = networkConfigs[chainId];
   if (!config) {
     // this case can only ever occure when a wallet is connected with a unknown chainId which will not allow interaction
@@ -187,67 +187,67 @@ export const getProvider = (chainId: ChainId): ethersProviders.Provider => {
 };
 
 export const getENSProvider = () => {
-  const chainId = 1;
+  const chainId = 324;
   const config = getNetworkConfig(chainId);
-  return new StaticJsonRpcProvider(config.publicJsonRPCUrl[0], chainId);
+  return new JsonRpcProvider(config.publicJsonRPCUrl[0], chainId);
 };
 
-const ammDisableProposal = 'https://app.aave.com/governance/proposal/44';
-const ustDisableProposal = 'https://app.aave.com/governance/proposal/75';
-const kncDisableProposal = 'https://app.aave.com/governance/proposal/69';
-const v2MainnetDisableProposal = 'https://app.aave.com/governance/proposal/111';
-const v2MainnetDisableProposal2 = 'https://app.aave.com/governance/proposal/125';
-const v2PolygonDisableProposal = 'https://app.aave.com/governance/proposal/124';
+// const ammDisableProposal = 'https://app.aave.com/governance/proposal/44';
+// const ustDisableProposal = 'https://app.aave.com/governance/proposal/75';
+// const kncDisableProposal = 'https://app.aave.com/governance/proposal/69';
+// const v2MainnetDisableProposal = 'https://app.aave.com/governance/proposal/111';
+// const v2MainnetDisableProposal2 = 'https://app.aave.com/governance/proposal/125';
+// const v2PolygonDisableProposal = 'https://app.aave.com/governance/proposal/124';
 
 export const frozenProposalMap: Record<string, string> = {
-  ['UST' + CustomMarket.proto_mainnet]: ustDisableProposal,
-  ['KNC' + CustomMarket.proto_mainnet]: kncDisableProposal,
-  ['UNIDAIUSDC' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIWBTCUSDC' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIDAIWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIUSDCWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIAAVEWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIBATWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNICRVWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNILINKWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIMKRWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIRENWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNISNXWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIUNIWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIWBTCWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['UNIYFIWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['BPTWBTCWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['BPTBALWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
-  ['BAL' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal,
-  ['CVX' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal,
-  ['REN' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal,
-  ['YFI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['CRV' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['ZRX' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['MANA' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['1INCH' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['BAT' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['SUSD' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['ENJ' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['GUSD' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['AMPL' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['RAI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['USDP' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['LUSD' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['XSUSHI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['DPI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['RENFIL' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['MKR' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['ENS' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['LINK' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['UNI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['SNX' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
-  ['BAL' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
-  ['CRV' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
-  ['DPI' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
-  ['GHST' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
-  ['LINK' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
-  ['XSUSHI' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
+  // ['UST' + CustomMarket.proto_mainnet]: ustDisableProposal,
+  // ['KNC' + CustomMarket.proto_mainnet]: kncDisableProposal,
+  // ['UNIDAIUSDC' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIWBTCUSDC' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIDAIWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIUSDCWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIAAVEWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIBATWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNICRVWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNILINKWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIMKRWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIRENWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNISNXWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIUNIWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIWBTCWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['UNIYFIWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['BPTWBTCWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['BPTBALWETH' + CustomMarket.proto_mainnet]: ammDisableProposal,
+  // ['BAL' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal,
+  // ['CVX' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal,
+  // ['REN' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal,
+  // ['YFI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['CRV' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['ZRX' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['MANA' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['1INCH' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['BAT' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['SUSD' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['ENJ' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['GUSD' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['AMPL' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['RAI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['USDP' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['LUSD' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['XSUSHI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['DPI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['RENFIL' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['MKR' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['ENS' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['LINK' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['UNI' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['SNX' + CustomMarket.proto_mainnet]: v2MainnetDisableProposal2,
+  // ['BAL' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
+  // ['CRV' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
+  // ['DPI' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
+  // ['GHST' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
+  // ['LINK' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
+  // ['XSUSHI' + CustomMarket.proto_polygon]: v2PolygonDisableProposal,
 };
 
 // reexport so we can forbit config import

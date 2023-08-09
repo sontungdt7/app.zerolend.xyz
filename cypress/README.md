@@ -18,7 +18,7 @@ _steps:_
 
 ```sh
 TENDERLY_KEY=
-TENDERLY_ACCOUNT=Aave
+TENDERLY_ACCOUNT=ZeroLend
 TENDERLY_PROJECT=QA
 ```
 
@@ -42,7 +42,7 @@ P.C. for execute those commands locally need to:
 
 ```sh
 TENDERLY_KEY=
-TENDERLY_ACCOUNT=Aave
+TENDERLY_ACCOUNT=ZeroLend
 TENDERLY_PROJECT=QA
 ```
 

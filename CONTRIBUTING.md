@@ -1,20 +1,20 @@
-# Objective of the Aave Interface
+# Objective of the ZeroLend Interface
 
-The website-hosted user interface at app.aave.com (the “Interface”) is provided by the Aave Companies, a group of software development companies that build open source, blockchain-based software. The Interface is hosted on the Interplanetary File System (“IPFS”), is open source and provides information to users regarding the (a) the Aave Protocol, a decentralized, non-custodial liquidity protocol on the Ethereum blockchain that allows users to supply or borrow cryptoassets and earn interest on supplied assets (the “Aave Protocol”); (b) the Aave Safety Module, the primary mechanism for securing the Aave Protocol (the “Aave Safety Module”); and (c) Aave Governance, the mechanism through which AAVE token holders collectively discuss, propose, and vote on upgrades to the Aave Protocol (“Aave Governance”).
+The website-hosted user interface at app.aave.com (the “Interface”) is provided by the ZeroLend Companies, a group of software development companies that build open source, blockchain-based software. The Interface is hosted on the Interplanetary File System (“IPFS”), is open source and provides information to users regarding the (a) the ZeroLend Protocol, a decentralized, non-custodial liquidity protocol on the Ethereum blockchain that allows users to supply or borrow cryptoassets and earn interest on supplied assets (the “ZeroLend Protocol”); (b) the ZeroLend Safety Module, the primary mechanism for securing the ZeroLend Protocol (the “ZeroLend Safety Module”); and (c) ZeroLend Governance, the mechanism through which AAVE token holders collectively discuss, propose, and vote on upgrades to the ZeroLend Protocol (“ZeroLend Governance”).
 
 The Interface serves as an informational gateway, which allows users to:
-- Monitor their positions on the Aave Protocol;
-- Monitor their positions on the Aave Safety Module; and
-- Monitor and coordinate participation in Aave Governance.
+- Monitor their positions on the ZeroLend Protocol;
+- Monitor their positions on the ZeroLend Safety Module; and
+- Monitor and coordinate participation in ZeroLend Governance.
 
-Given the nature of decentralized blockchain technology, the Aave Prococol can either be accessed though the Interface, directly through smart contracts, or through third party protocol integrators. The Interface is a public good, along with the hundreds of other, unaffiliated on-ramps into the Aave Protocol.  Our aim, in the interest of decentralization, is transparency and contributions from all community members only enhance the Aave Protocol ecosystem. This document and the below guidelines will constantly evolve – including with input from the community – but will endeavor to provide you with information about navigating the Interface smoothly.
+Given the nature of decentralized blockchain technology, the ZeroLend Prococol can either be accessed though the Interface, directly through smart contracts, or through third party protocol integrators. The Interface is a public good, along with the hundreds of other, unaffiliated on-ramps into the ZeroLend Protocol.  Our aim, in the interest of decentralization, is transparency and contributions from all community members only enhance the ZeroLend Protocol ecosystem. This document and the below guidelines will constantly evolve – including with input from the community – but will endeavor to provide you with information about navigating the Interface smoothly.
 
-# Aave Team Responsibilities on the Aave Interface
-The Aave team has certain responsibilities with respect to the Aave Interface. This includes the following:
-- Review all PRs that get created on any repositories that fall under Aave Interface;
+# ZeroLend Team Responsibilities on the ZeroLend Interface
+The ZeroLend team has certain responsibilities with respect to the ZeroLend Interface. This includes the following:
+- Review all PRs that get created on any repositories that fall under ZeroLend Interface;
   - aave/interface
   - aave/aave-utilities
-- Determine the roadmap of features that will be included on the Aave Interface; and
+- Determine the roadmap of features that will be included on the ZeroLend Interface; and
 - Maintaining the security, usability, and style of the codebase, including any integrations with third party services
 
 # Reporting New Features, Improvements & Bugs
@@ -26,7 +26,7 @@ The “Issues List” in GitHub keeps track of all work on the Interface. If you
 5. Once the issue is created, it will get a “New Issue” label, which is a helpful indication for the Interface Team to triage the new request.
 
 # Picking up an issue for work
-Whether you’re a first time or existing contributor to the Interface and/or the Aave ecosystem, you may engage by picking up any issue that is labelled “Looking for Help,” as this will be the right place to start. These issues will have been triaged already by the Interface Team.
+Whether you’re a first time or existing contributor to the Interface and/or the ZeroLend ecosystem, you may engage by picking up any issue that is labelled “Looking for Help,” as this will be the right place to start. These issues will have been triaged already by the Interface Team.
 Once you’ve identified an issue that you want to pick up, you should:
   1. Comment on the issue expressing interest. A member of the Interface Team will assign it to you.
       <aside> 💡 In order to mitigate issues from becoming stale, we may reassign or un-assign an issue after an extended period of time if we see that no commits are occurring on it. We will reach out to the original assignee in these instances
@@ -166,7 +166,7 @@ Once you have both copied over the values into `localStorage` and have saved the
 
 Next, reload the page. The new forked network should appear in the dropdown list for markets in the application.
 
-Finally, switch to the market pertaining to the fork in the dropdown list. Now you are able to interact with the Aave Protocol via the UI without spending any real funds!
+Finally, switch to the market pertaining to the fork in the dropdown list. Now you are able to interact with the ZeroLend Protocol via the UI without spending any real funds!
 
 __NOTE:__ _Always double-check the selected network in your wallet provider to make sure transactions are executed only on the fork network_.
 
@@ -177,7 +177,7 @@ To add a new token to the app, the process is pretty simple. All you’ll need t
 
 ## Translations
 
-Aave uses [Crowdin](https://crowdin.com/) for translation management and internationalization. We only update strings within the app. Everything else is downloaded from Crowdin. For more information, such as installing their CLI tool, read their [documentation](https://developer.crowdin.com/api/v2/).
+ZeroLend uses [Crowdin](https://crowdin.com/) for translation management and internationalization. We only update strings within the app. Everything else is downloaded from Crowdin. For more information, such as installing their CLI tool, read their [documentation](https://developer.crowdin.com/api/v2/).
 
 To upload strings:
 
