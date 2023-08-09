@@ -1,4 +1,3 @@
-import { Trans } from '@lingui/macro';
 import { Box, Tooltip, Typography } from '@mui/material';
 import { useAppDataContext } from 'src/hooks/app-data-provider/useAppDataProvider';
 
@@ -6,7 +5,6 @@ import { PopperComponent } from '../ContentWithTooltip';
 import GhoBorrowApyRange from '../GhoBorrowApyRange';
 import { FormattedNumber } from '../primitives/FormattedNumber';
 import { Link } from '../primitives/Link';
-import { NoData } from '../primitives/NoData';
 import { TokenIcon } from '../primitives/TokenIcon';
 
 export interface GhoIncentivesCardProps {
