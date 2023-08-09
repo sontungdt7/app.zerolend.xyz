@@ -41,7 +41,7 @@ const GhoBorrowInfoDesktop = ({ reserve, ghoReserveData }: GhoBorrowInfoProps) =
         onClick={(open) => {
           if (open) {
             trackEvent(GENERAL.TOOL_TIP, {
-              tooltip: 'Total GHO borrowed',
+              tooltip: 'Total ONEZ borrowed',
             });
           }
         }}
@@ -169,7 +169,7 @@ const GhoBorrowInfoMobile = ({ reserve, ghoReserveData }: GhoBorrowInfoProps) =>
           onClick={(open) => {
             if (open) {
               trackEvent(GENERAL.TOOL_TIP, {
-                tooltip: 'Total GHO borrowed',
+                tooltip: 'Total ONEZ borrowed',
               });
             }
           }}

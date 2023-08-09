@@ -55,25 +55,7 @@ export const GhoIncentivesCard = ({
           },
         }}
       >
-        <Typography variant="subheader2">
-          <Trans>
-            Estimated compounding interest, including discount for Staking{' '}
-            {minStkAaveBalanceReached ? (
-              <>
-                <FormattedNumber variant="subheader2" value={stkAaveAmount} visibleDecimals={2} />{' '}
-              </>
-            ) : null}
-            AAVE in Safety Module.
-          </Trans>{' '}
-          <Link
-            onClick={onMoreDetailsClick}
-            href={ghoRoute}
-            underline="always"
-            variant="subheader2"
-          >
-            <Trans>Learn more</Trans>
-          </Link>
-        </Typography>
+        <Typography variant="subheader2">Estimated compounding interest</Typography>
       </Box>
     );
   }

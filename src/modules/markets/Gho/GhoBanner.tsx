@@ -189,7 +189,7 @@ export const GhoBanner = ({ reserve }: GhoBannerProps) => {
               }}
             >
               <TokenIcon
-                symbol="GHO"
+                symbol="ONEZ"
                 sx={{
                   fontSize: '38px',
                   display: {

@@ -190,12 +190,12 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
       },
       divider: getColor('#EAEBEF', '#EBEBEF14'),
       action: {
-        active: getColor('#8E92A3', '#EBEBEF8F'),
-        hover: getColor('#F1F1F3', '#EBEBEF14'),
+        active: getColor('#fff', '#EBEBEF8F'),
+        hover: getColor('#fff', '#EBEBEF14'),
         selected: getColor('#EAEBEF', '#EBEBEF29'),
         disabled: getColor('#BBBECA', '#EBEBEF4D'),
         disabledBackground: getColor('#EAEBEF', '#EBEBEF1F'),
-        focus: getColor('#F1F1F3', '#EBEBEF1F'),
+        focus: getColor('#fff', '#EBEBEF1F'),
       },
       other: {
         standardInputLine: getColor('#27264C1F', '#EBEBEF6B'),
@@ -392,18 +392,6 @@ export function getThemedComponents(theme: Theme) {
             },
             '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
               borderColor: '#CBCDD8',
-            },
-          },
-        },
-      },
-      MuiSlider: {
-        styleOverrides: {
-          root: {
-            '& .MuiSlider-thumb': {
-              color: theme.palette.mode === 'light' ? '#383D51' : '#C9B3F9',
-            },
-            '& .MuiSlider-track': {
-              color: theme.palette.mode === 'light' ? '#27264C' : '#9C93B3',
             },
           },
         },

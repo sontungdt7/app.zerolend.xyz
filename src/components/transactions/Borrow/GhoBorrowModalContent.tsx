@@ -124,7 +124,7 @@ export const GhoBorrowModalContent = ({
   const [amount, setAmount] = useState('');
   const [riskCheckboxAccepted, setRiskCheckboxAccepted] = useState(false);
 
-  // Check if user has any open borrow positions on GHO
+  // Check if user has any open borrow positions on ONEZ
   // Check if user can borrow at a discount
   const hasGhoBorrowPositions = ghoUserData.userGhoBorrowBalance > 0;
   const userStakedAaveBalance: number = ghoUserData.userDiscountTokenBalance;
@@ -306,20 +306,6 @@ export const GhoBorrowModalContent = ({
             </Box>
           </Box>
         </Row>
-        {discountAvailable && (
-          <Typography variant="helperText" color="text.secondary">
-            <Trans>
-              Discount applied for{' '}
-              <FormattedNumber
-                variant="helperText"
-                color="text.secondary"
-                visibleDecimals={2}
-                value={userStakedAaveBalance}
-              />{' '}
-              staking AAVE
-            </Trans>
-          </Typography>
-        )}
       </TxModalDetails>
 
       {txError && <GasEstimationError txError={txError} />}
