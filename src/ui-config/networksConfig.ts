@@ -60,7 +60,7 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
     baseAssetDecimals: 18,
     explorerLink: 'https://goerli.explorer.zksync.io/',
     // usdMarket: true,
-    isTestnet: true,
+    // isTestnet: true,
     networkLogoPath: '/icons/networks/zksync.svg',
   },
   [324]: {
