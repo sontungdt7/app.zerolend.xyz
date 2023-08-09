@@ -59,22 +59,22 @@ export const GhoBanner = ({ reserve }: GhoBannerProps) => {
           },
           [theme.breakpoints.up(1125)]: {
             padding: {
-              xs: '24px 24px 24px 230px',
+              xs: '24px 24px 24px 240x',
               lg: '24px 32px 24px 240x',
             },
           },
           padding: {
             xs: '16px',
-            xsm: '16px 16px 16px 180px',
-            sm: '16px 24px 16px 188px',
-            md: '22px 20px 22px 200px',
+            // xsm: '16px 16px 16px 180px',
+            // sm: '16px 24px 16px 188px',
+            // md: '22px 20px 22px 200px',
           },
           gap: {
             xs: 6,
           },
         })}
       >
-        <Box
+        {/* <Box
           component="img"
           src="/illustration_desktop.png"
           alt="ghost and coin"
@@ -101,7 +101,7 @@ export const GhoBanner = ({ reserve }: GhoBannerProps) => {
               xsm: -10,
             },
           }}
-        />
+        /> */}
         <Box
           sx={{
             display: 'flex',
