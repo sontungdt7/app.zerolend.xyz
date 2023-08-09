@@ -8,6 +8,7 @@ import { NetworkConfig } from '../../ui-config/networksConfig';
 // import { BridgeButton } from '../BridgeButton';
 import { MarketSwitcher } from '../MarketSwitcher';
 import { Link, ROUTES } from '../primitives/Link';
+import { Warning } from '../primitives/Warning';
 
 export interface PageTitleProps extends Pick<NetworkConfig, 'bridge'> {
   pageTitle?: ReactNode;
@@ -55,6 +56,24 @@ export const PageTitle = ({ pageTitle, withMarketSwitcher, withMigrateButton }: 
           mb: !pageTitle ? 4 : 0,
         }}
       >
+        <Warning severity="warning" icon={false}>
+          <Typography variant="subheader1">
+            <Trans>$ZERO early bird farming is now live!</Trans>
+          </Typography>
+          <Trans>
+            User who deposit assets into the protocol can now claim $earlyZERO! $earlyZERO can be
+            redeemable for $ZERO tokens (at a 1:1 ratio) on token launch. Read about the{' '}
+            <a
+              href="https://docs.zerolend.xyz/roadmap/phase-1-launch"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Phase 1 Launch
+            </a>{' '}
+            to learn more.
+          </Trans>
+        </Warning>
+        <br />
         {withMarketSwitcher && <MarketSwitcher />}
         {/* <BridgeButton bridge={bridge} variant="surface" withoutIcon={!upToMD} /> */}
         {/* NOTE:// Removing for now  */}
