@@ -1,7 +1,6 @@
 import { Tooltip, Typography } from '@mui/material';
 import { ReactNode } from 'react';
 import { BorrowDisabledToolTip } from 'src/components/infoTooltips/BorrowDisabledToolTip';
-import { BUSDOffBoardingTooltip } from 'src/components/infoTooltips/BUSDOffboardingToolTip';
 import { StETHCollateralToolTip } from 'src/components/infoTooltips/StETHCollateralToolTip';
 import { useAssetCaps } from 'src/hooks/useAssetCaps';
 import { useRootStore } from 'src/store/root';
@@ -51,7 +50,6 @@ export const ListItemWrapper = ({
   const showRenFilTooltip = frozen && symbol === 'renFIL';
   const showAmplTooltip = !frozen && symbol === 'AMPL';
   const showstETHTooltip = symbol == 'stETH';
-  const showBUSDOffBoardingTooltip = symbol == 'BUSD';
   const showBorrowDisabledTooltip = !frozen && !borrowEnabled;
   const trackEvent = useRootStore((store) => store.trackEvent);
 
@@ -82,7 +80,6 @@ export const ListItemWrapper = ({
         {showRenFilTooltip && <RenFILToolTip />}
         {showAmplTooltip && <AMPLToolTip />}
         {showstETHTooltip && <StETHCollateralToolTip />}
-        {showBUSDOffBoardingTooltip && <BUSDOffBoardingTooltip />}
         {showBorrowDisabledTooltip && (
           <BorrowDisabledToolTip symbol={symbol} currentMarket={currentMarket} />
         )}
