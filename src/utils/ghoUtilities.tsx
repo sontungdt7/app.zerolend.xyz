@@ -8,7 +8,7 @@ export const GHO_SYMBOL = 'ONEZ';
  * @returns {bool} - If the GHO token is available for minting
  */
 
-export const GHO_SUPPORTED_MARKETS = ['proto_zksync_era_v3', 'proto_zksync_goerli_v3'];
+export const GHO_SUPPORTED_MARKETS = ['proto_zksync_goerli_v3'];
 
 export const getGhoReserve = (reserves: ComputedReserveData[]) => {
   return reserves.find((reserve) => reserve.symbol === GHO_SYMBOL);
