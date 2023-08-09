@@ -43,7 +43,6 @@ export const ListMobileItemWrapper = ({
     const showRenFilTooltip = frozen && symbol === 'renFIL';
     const showAmplTooltip = !frozen && symbol === 'AMPL';
     const showstETHTooltip = symbol == 'stETH';
-    const showBUSDOffBoardingTooltip = symbol == 'BUSD';
     const showBorrowDisabledTooltip = !frozen && !borrowEnabled;
     return (
       <>

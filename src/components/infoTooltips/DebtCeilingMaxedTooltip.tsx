@@ -3,7 +3,6 @@ import { Trans } from '@lingui/macro';
 import { Box } from '@mui/material';
 import { AssetCapData } from 'src/hooks/useAssetCaps';
 
-import { Link } from '../primitives/Link';
 import { TextWithTooltip, TextWithTooltipProps } from '../TextWithTooltip';
 
 type DebtCeilingMaxedTooltipProps = TextWithTooltipProps & {
@@ -20,13 +19,7 @@ export const DebtCeilingMaxedTooltip = ({ debtCeiling, ...rest }: DebtCeilingMax
           <Trans>
             Protocol debt ceiling is at 100% for this asset. Futher borrowing against this asset is
             unavailable.
-          </Trans>{' '}
-          <Link
-            href="https://docs.aave.com/faq/aave-v3-features#how-does-isolation-mode-affect-my-borrowing-power"
-            underline="always"
-          >
-            <Trans>Learn more</Trans>
-          </Link>
+          </Trans>
         </>
       </TextWithTooltip>
     </Box>
