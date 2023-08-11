@@ -26,6 +26,7 @@ import { ListButtonsColumn } from '../ListButtonsColumn';
 import { ListLoader } from '../ListLoader';
 import { SuppliedPositionsListItem } from './SuppliedPositionsListItem';
 import { SuppliedPositionsListMobileItem } from './SuppliedPositionsListMobileItem';
+import { Warning } from 'src/components/primitives/Warning';
 
 const head = [
   {
@@ -76,9 +77,9 @@ export const SuppliedPositionsList = () => {
           ...userReserve.reserve,
           ...(userReserve.reserve.isWrappedBaseAsset
             ? fetchIconSymbolAndName({
-                symbol: currentNetworkConfig.baseAssetSymbol,
-                underlyingAsset: API_ETH_MOCK_ADDRESS.toLowerCase(),
-              })
+              symbol: currentNetworkConfig.baseAssetSymbol,
+              underlyingAsset: API_ETH_MOCK_ADDRESS.toLowerCase(),
+            })
             : {}),
         },
       })) || [];
@@ -171,6 +172,47 @@ export const SuppliedPositionsList = () => {
         </>
       }
     >
+      {sortedReserves.length > 0 ? (
+        <>
+          <br />
+          <Warning severity="info">
+            <Typography variant="subheader1">
+              <Trans>Congrats! You now have special access to our Discord!</Trans>
+            </Typography>
+            <Trans>
+              As a liquidity provider, you will get roles (Shrimp/Shark/Whale) in our discord that give you access to exclusive channels.
+              Visit <a
+                href="https://guild.xyz/zerolend"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Guild.xyz
+              </a>{' '}
+              to learn more about the roles you can get.
+            </Trans>
+          </Warning>
+        </>
+      ) : (
+        <>
+          <br />
+          <Warning severity="info">
+            <Typography variant="subheader1">
+              <Trans>Provide liquidity and get special access to our Discord</Trans>
+            </Typography>
+            <Trans>
+              Users who provide liquidity will get special roles (Shrimp/Shark/Whale) in our discord that give you access to exclusive channels.
+              Visit <a
+                href="https://guild.xyz/zerolend"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Guild.xyz
+              </a>{' '}to learn more.
+            </Trans>
+          </Warning>
+        </>
+      )}
+
       {sortedReserves.length ? (
         <>
           {!downToXSM && <RenderHeader />}
