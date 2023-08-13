@@ -3,7 +3,7 @@ import { GitHub, Twitter } from '@mui/icons-material';
 import { Box, styled, SvgIcon, Typography } from '@mui/material';
 import { Link } from 'src/components/primitives/Link';
 
-import TelegramIcon from '/public/icons/telegram.svg';
+import DiscordIcon from '/public/icons/discord.svg';
 
 interface StyledLinkProps {
   onClick?: React.MouseEventHandler<HTMLAnchorElement>;
@@ -25,9 +25,9 @@ const FOOTER_ICONS = [
     title: 'Twitter',
   },
   {
-    href: 'https://t.me/zerolendxyz',
-    icon: <TelegramIcon />,
-    title: 'Telegram',
+    href: 'https://discord.com/invite/YUQfhWcfZ7',
+    icon: <DiscordIcon />,
+    title: 'Discord',
   },
   {
     href: 'https://github.com/zerolend',
@@ -49,9 +49,9 @@ export function AppFooter() {
       key: 'Github',
     },
     {
-      href: 'https://t.me/zerolendxyz',
-      label: <Trans>Telegram</Trans>,
-      key: 'Telegram',
+      href: 'https://discord.com/invite/YUQfhWcfZ7',
+      label: <Trans>Discord</Trans>,
+      key: 'Discord',
     },
   ];
 
